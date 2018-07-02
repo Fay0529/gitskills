@@ -4,7 +4,7 @@ using namespace std;
 int n;
 stack<int>data;
 int main(){
-   // freopen("in.txt","r",stdin);
+    
     while(cin>>n){
         while(n--){
             char c;
@@ -15,14 +15,12 @@ int main(){
                 data.push(d);
             }
             else if(c=='O'){
-                if(!data.empty())data.pop();
+                if(!data.isEmpty())data.pop();
             }
             else if(c=='A'){
-                if(!data.empty())cout<<data.top()<<endl;
+                if(!data.isEmpty())cout<<data.top()<<endl;
                 else cout<<'E'<<endl;
             }
         }
-        while(!data.empty())data.pop();
-        cout<<endl;
     }
 }
